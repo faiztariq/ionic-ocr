@@ -1,0 +1,14 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "ionic-ocr",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "linuxAndroidStudioPath": "/usr/local/android-studio/bin/studio.sh"
+}

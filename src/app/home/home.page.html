@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      OCR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+</ion-content> -->
+
+<ion-content class="ion-padding">
+  <ion-img [src]="image"></ion-img>
+  <ion-button expand="full" (click)="captureImage()">Capture Image</ion-button>
+  <ion-button expand="full" (click)="recognizeImage()" [disabled]="!workerReady">Recognize Image</ion-button>
+
+  <ion-card *ngIf="workerReady && captureProgress">
+    <ion-card-header>
+      <ion-card-title>
+        Capture Progress : {{ captureProgress }}%
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ ocrResult }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
